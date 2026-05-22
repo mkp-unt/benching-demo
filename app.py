@@ -161,7 +161,7 @@ selected_category = st.selectbox(
 )
 
 if selected_category == "-- Select a Stone Category --":
-    st.info("👆 Please select a stone category from the dropdown above to view its visual clusters.")
+    st.info("Please select a stone category from the dropdown above to view its visual clusters.")
     st.stop()
 st.markdown('</div>', unsafe_allow_html=True)
 
