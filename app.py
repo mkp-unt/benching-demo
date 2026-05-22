@@ -151,12 +151,18 @@ if not available:
 # st.markdown('<div class="selector-wrap">', unsafe_allow_html=True)
 st.markdown('<div class="selector-label">Select Stone Category</div>', unsafe_allow_html=True)
 
+options = ["-- Select a Stone Category --"] + available
+
 selected_category = st.selectbox(
     label="stone_category",
-    options=available,
+    options=options,
     label_visibility="collapsed",
     index=0,
 )
+
+if selected_category == "-- Select a Stone Category --":
+    st.info("👆 Please select a stone category from the dropdown above to view its visual clusters.")
+    st.stop()
 st.markdown('</div>', unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------
